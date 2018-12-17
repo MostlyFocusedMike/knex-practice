@@ -17,5 +17,6 @@ module.exports = {
         "arrow-body-style": "off",
         "func-names": "off",
         "prefer-arrow-callback": "off",
+        "class-methods-use-this": "off",
     },
 };
