@@ -91,6 +91,20 @@ const start = async () => {
                 return Note.getBelongsToFor(request.params.id);
             },
         },
+        {
+            method: 'GET',
+            path: '/newest-user',
+            handler: async (request, h) => {
+                return User.getNewestUser();
+            },
+        },
+        {
+            method: 'GET',
+            path: '/longest-note',
+            handler: async (request, h) => {
+                return Note.getLongestNote();
+            },
+        },
     ]);
     try {
         await server.start();

@@ -1,9 +1,10 @@
+const pluralize = require('pluralize');
 const knex = require('../db/knex');
 
 class Yoink {
     constructor(model) {
         this.name = model.name;
-        this.table = model.table;
+        this.table = pluralize(model.name);
         this.hasMany = model.hasMany;
         this.belongsTo = model.belongsTo;
     }
